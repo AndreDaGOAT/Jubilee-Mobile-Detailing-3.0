@@ -1,9 +1,9 @@
 const settings = {
-  businessName: "ShineFlow Detail Co.",
-  phone: "+15555555555",
-  displayPhone: "(555) 555-5555",
-  email: "hello@example.com",
-  calendlyUrl: "https://calendly.com/your-calendly-link",
+  businessName: "Jubilee-Luxury-Mobile-Detailing Co.",
+  phone: "+6153487683",
+  displayPhone: "(615) 348-7683",
+  email: "Contact@jubileeexecutivecarservice.com",
+  calendlyUrl: "https://calendly.com/aarmstrong1234",
   formspreeEndpoint: "https://formspree.io/f/your-form-id",
 };
 
