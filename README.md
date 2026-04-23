@@ -1,8 +1,9 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/README.md b/README.md
-index 3f51556bdac43f16bf115da8792db6ab1c5d1532..293c9df5574267114631eb84bf791d30432f176b 100644
+index 3f51556bdac43f16bf115da8792db6ab1c5d1532..df39ed396ee2cf90c950605bb9f6f36938a9ccbe 100644
 --- a/README.md
 +++ b/README.md
-@@ -1,10 +1,55 @@
+@@ -1,10 +1,69 @@
 -- 👋 Hi, I’m @AndreDaGOAT
 -- 👀 I’m interested in programming, data analystics, AI coding..
 -- 🌱 I’m currently learning Python, AI coding enhancements...
@@ -15,7 +16,7 @@ index 3f51556bdac43f16bf115da8792db6ab1c5d1532..293c9df5574267114631eb84bf791d30
 ---->
 +# Mobile Detailing Business System (GitHub-Ready)
 +
-+A deploy-ready static website for a mobile detailing business.
++A deploy-ready static website for a mobile detailing business with a black-and-gold executive visual theme.
 +
 +## What this includes
 +
@@ -57,6 +58,20 @@ index 3f51556bdac43f16bf115da8792db6ab1c5d1532..293c9df5574267114631eb84bf791d30
 +   - Open booking link
 +   - Verify contact links
 +
++## Address autocomplete (Google Places)
++
++The quote form includes a **Service Address** field with Google Places autocomplete.
++
++- Script used in `index.html`:
++  `https://maps.googleapis.com/maps/api/js?key=AIzaSyARZAA619g3JlruK77Lfm8vlopcR76vRGg&libraries=places&callback=initGooglePlaces`
++- Captured fields sent with form:
++  - `service_address`
++  - `address_place_id`
++  - `address_lat`
++  - `address_lng`
++
++> Important: Restrict the Google Maps API key by HTTP referrer and enable only required APIs in Google Cloud.
++
 +## Tool choices supported
 +
 +- Hosting: **GitHub Pages** (free)
@@ -68,3 +83,6 @@ index 3f51556bdac43f16bf115da8792db6ab1c5d1532..293c9df5574267114631eb84bf791d30
 +## Optional upgrade path
 +
 +- Move hosting/forms to Netlify later if you want easier automation.
+ 
+EOF
+)
