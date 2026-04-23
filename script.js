@@ -26,7 +26,7 @@ if (emailLink) {
 }
 if (yearLabel) yearLabel.textContent = String(new Date().getFullYear());
 
-if (formMessage && settings.formspreeEndpoint.includes("your-form-id")) {
+if (formMessage && settings.formspreeEndpoint.includes("mpqkokga")) {
   formMessage.textContent = "Setup required: update formspreeEndpoint in script.js.";
 }
 
