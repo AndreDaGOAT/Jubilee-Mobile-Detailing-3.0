@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jubilee Luxury Mobile Detailing | Book, Capture Leads, Track Customers</title>
+    <title>ShineFlow Mobile Detailing | Book, Capture Leads, Track Customers</title>
     <meta
       name="description"
-      content="Jubilee Luxury mobile detailing business system: GitHub Pages website, Formspree lead form, Calendly booking, and HubSpot/Google Sheets CRM workflow."
+      content="GitHub-ready mobile detailing business system: GitHub Pages website, Formspree lead form, Calendly booking, and HubSpot/Google Sheets CRM workflow."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#home">Jubilee Luxury Mobile Detailing Co.</a>
+        <a class="brand" href="#home">ShineFlow Detail Co.</a>
         <nav aria-label="Primary">
           <ul class="nav">
             <li><a href="#services">Services</a></li>
@@ -30,7 +36,7 @@
       <section class="hero section">
         <div class="container hero-grid">
           <div>
-            <p class="pill">ready starter code</p>
+            <p class="pill">GitHub-ready starter code</p>
             <h1>Run your mobile detailing business from one lightweight system.</h1>
             <p class="lead">
               Launch quickly with GitHub Pages + Formspree + Calendly + HubSpot
@@ -41,9 +47,8 @@
               <a class="btn btn-secondary" href="#booking">Book Appointment</a>
             </div>
             <div class="quick-contact">
-              <a id="phoneLink" href="tel:+mattmcneal3@gmail.com
-              ">Call (615) 509-9491</a>
-              <a id="emailLink" href="mailto:Contact@jubileeexecutivecarservice.com">hello@example.</a>
+              <a id="phoneLink" href="tel:+15555555555">Call (555) 555-5555</a>
+              <a id="emailLink" href="mailto:hello@example.com">hello@example.com</a>
             </div>
           </div>
           <aside class="card">
@@ -85,7 +90,7 @@
       <section id="quote" class="section">
         <div class="container two-col">
           <div>
-            <h2>Consult with a Private Client Advisor Form</h2>
+            <h2>Lead Capture Form</h2>
             <p>
               This form is set up for Formspree. You can also replace it with a
               Google Form embed if you want a no-code intake option.
@@ -121,10 +126,27 @@
               </select>
             </label>
             <label>
+              Service Address
+              <input
+                id="serviceAddress"
+                type="text"
+                name="service_address"
+                placeholder="Start typing your address"
+                autocomplete="street-address"
+                required
+              />
+            </label>
+            <input id="addressPlaceId" type="hidden" name="address_place_id" />
+            <input id="addressLat" type="hidden" name="address_lat" />
+            <input id="addressLng" type="hidden" name="address_lng" />
+            <label>
               Service Needed
               <textarea name="request" rows="4" required></textarea>
             </label>
             <button class="btn btn-primary" type="submit">Submit Quote Request</button>
+            <p id="addressHint" class="hint">
+              Address autocomplete loads from Google Places API to improve accuracy.
+            </p>
             <p id="formMessage" class="hint" role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -193,11 +215,16 @@
 
     <footer class="site-footer">
       <div class="container footer-wrap">
-        <p>© <span id="year"></span> Jubilee Luxury Mobile Detailing Co. </p>
+        <p>© <span id="year"></span> ShineFlow Detail Co.</p>
         <p>Optional upgrade later: Netlify for simpler forms and automation.</p>
       </div>
     </footer>
 
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARZAA619g3JlruK77Lfm8vlopcR76vRGg&libraries=places&callback=initGooglePlaces"
+      async
+      defer
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
