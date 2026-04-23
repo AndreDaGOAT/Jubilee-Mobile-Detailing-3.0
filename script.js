@@ -4,7 +4,7 @@ const settings = {
   displayPhone: "(615) 348-7683",
   email: "Contact@jubileeexecutivecarservice.com",
   calendlyUrl: "https://calendly.com/aarmstrong1234",
-  formspreeEndpoint: "https://https://formspree.io/f/mpqkokga",
+  formspreeEndpoint: "https://formspree.io/f/mpqkokga",
 };
 
 const bookingLink = document.getElementById("bookingLink");
